@@ -22,45 +22,123 @@ Partial Class frmPrincipal
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.flowModules = New System.Windows.Forms.FlowLayoutPanel()
-        Me.flpPrincipal = New System.Windows.Forms.FlowLayoutPanel()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmPrincipal))
+        Me.btnClientes = New System.Windows.Forms.Button()
+        Me.btnPlanes = New System.Windows.Forms.Button()
+        Me.btnServicios = New System.Windows.Forms.Button()
+        Me.btnInstalaciones = New System.Windows.Forms.Button()
+        Me.btnFacturas = New System.Windows.Forms.Button()
+        Me.btnInformes = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.phPrincipal = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lblSubtitulo = New System.Windows.Forms.Label()
         Me.phPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
-        'flowModules
+        'btnClientes
         '
-        Me.flowModules.AutoScroll = True
-        Me.flowModules.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.flowModules.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flowModules.Location = New System.Drawing.Point(0, 0)
-        Me.flowModules.Name = "flowModules"
-        Me.flowModules.Padding = New System.Windows.Forms.Padding(28)
-        Me.flowModules.Size = New System.Drawing.Size(1120, 700)
-        Me.flowModules.TabIndex = 4
+        Me.btnClientes.BackColor = System.Drawing.Color.White
+        Me.btnClientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.btnClientes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnClientes.Location = New System.Drawing.Point(95, 200)
+        Me.btnClientes.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnClientes.Name = "btnClientes"
+        Me.btnClientes.Size = New System.Drawing.Size(250, 150)
+        Me.btnClientes.TabIndex = 0
+        Me.btnClientes.Text = "Clientes"
+        Me.btnClientes.UseVisualStyleBackColor = False
         '
-        'flpPrincipal
+        'btnPlanes
         '
-        Me.flpPrincipal.AutoScroll = True
-        Me.flpPrincipal.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(248, Byte), Integer), CType(CType(252, Byte), Integer))
-        Me.flpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.flpPrincipal.Location = New System.Drawing.Point(0, 135)
-        Me.flpPrincipal.Name = "flpPrincipal"
-        Me.flpPrincipal.Padding = New System.Windows.Forms.Padding(28)
-        Me.flpPrincipal.Size = New System.Drawing.Size(1120, 565)
-        Me.flpPrincipal.TabIndex = 6
+        Me.btnPlanes.BackColor = System.Drawing.Color.White
+        Me.btnPlanes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.btnPlanes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPlanes.Location = New System.Drawing.Point(95, 420)
+        Me.btnPlanes.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnPlanes.Name = "btnPlanes"
+        Me.btnPlanes.Size = New System.Drawing.Size(250, 150)
+        Me.btnPlanes.TabIndex = 1
+        Me.btnPlanes.Text = "Planes"
+        Me.btnPlanes.UseVisualStyleBackColor = False
+        '
+        'btnServicios
+        '
+        Me.btnServicios.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.btnServicios.BackColor = System.Drawing.Color.White
+        Me.btnServicios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.btnServicios.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnServicios.Location = New System.Drawing.Point(735, 181)
+        Me.btnServicios.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnServicios.Name = "btnServicios"
+        Me.btnServicios.Size = New System.Drawing.Size(250, 150)
+        Me.btnServicios.TabIndex = 2
+        Me.btnServicios.Text = "Servicios"
+        Me.btnServicios.UseVisualStyleBackColor = False
+        '
+        'btnInstalaciones
+        '
+        Me.btnInstalaciones.BackColor = System.Drawing.Color.White
+        Me.btnInstalaciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.btnInstalaciones.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInstalaciones.Location = New System.Drawing.Point(415, 200)
+        Me.btnInstalaciones.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnInstalaciones.Name = "btnInstalaciones"
+        Me.btnInstalaciones.Size = New System.Drawing.Size(250, 150)
+        Me.btnInstalaciones.TabIndex = 3
+        Me.btnInstalaciones.Text = "Instalaciones"
+        Me.btnInstalaciones.UseVisualStyleBackColor = False
+        '
+        'btnFacturas
+        '
+        Me.btnFacturas.BackColor = System.Drawing.Color.White
+        Me.btnFacturas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.btnFacturas.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFacturas.Location = New System.Drawing.Point(415, 420)
+        Me.btnFacturas.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnFacturas.Name = "btnFacturas"
+        Me.btnFacturas.Size = New System.Drawing.Size(250, 150)
+        Me.btnFacturas.TabIndex = 4
+        Me.btnFacturas.Text = "Facturas"
+        Me.btnFacturas.UseVisualStyleBackColor = False
+        '
+        'btnInformes
+        '
+        Me.btnInformes.BackColor = System.Drawing.Color.White
+        Me.btnInformes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.btnInformes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnInformes.Location = New System.Drawing.Point(735, 420)
+        Me.btnInformes.Margin = New System.Windows.Forms.Padding(10)
+        Me.btnInformes.Name = "btnInformes"
+        Me.btnInformes.Size = New System.Drawing.Size(250, 150)
+        Me.btnInformes.TabIndex = 5
+        Me.btnInformes.Text = "Informes"
+        Me.btnInformes.UseVisualStyleBackColor = False
+        '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.White
+        Me.Button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
+        Me.Button1.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(0, 590)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(10)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(250, 150)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "POR SI"
+        Me.Button1.UseVisualStyleBackColor = False
+        Me.Button1.Visible = False
         '
         'phPrincipal
         '
         Me.phPrincipal.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(151, Byte), Integer))
         Me.phPrincipal.Controls.Add(Me.lblTitulo)
         Me.phPrincipal.Controls.Add(Me.lblSubtitulo)
-        Me.phPrincipal.Dock = System.Windows.Forms.DockStyle.Top
         Me.phPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.phPrincipal.Name = "phPrincipal"
-        Me.phPrincipal.Size = New System.Drawing.Size(1120, 135)
+        Me.phPrincipal.Size = New System.Drawing.Size(1366, 130)
         Me.phPrincipal.TabIndex = 5
         '
         'lblTitulo
@@ -70,9 +148,9 @@ Partial Class frmPrincipal
         Me.lblTitulo.ForeColor = System.Drawing.Color.White
         Me.lblTitulo.Location = New System.Drawing.Point(28, 30)
         Me.lblTitulo.Name = "lblTitulo"
-        Me.lblTitulo.Size = New System.Drawing.Size(253, 45)
+        Me.lblTitulo.Size = New System.Drawing.Size(370, 45)
         Me.lblTitulo.TabIndex = 0
-        Me.lblTitulo.Text = "Empresa Pepito"
+        Me.lblTitulo.Text = "Empresa T1 Token Ring"
         '
         'lblSubtitulo
         '
@@ -89,24 +167,35 @@ Partial Class frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1120, 700)
-        Me.Controls.Add(Me.flpPrincipal)
+        Me.ClientSize = New System.Drawing.Size(1366, 749)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnServicios)
+        Me.Controls.Add(Me.btnInformes)
         Me.Controls.Add(Me.phPrincipal)
-        Me.Controls.Add(Me.flowModules)
+        Me.Controls.Add(Me.btnPlanes)
+        Me.Controls.Add(Me.btnFacturas)
+        Me.Controls.Add(Me.btnInstalaciones)
+        Me.Controls.Add(Me.btnClientes)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.MinimizeBox = False
         Me.Name = "frmPrincipal"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Sistema de gestion - Empresa Pepito"
+        Me.Text = "Sistema T1 Token Ring"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.phPrincipal.ResumeLayout(False)
         Me.phPrincipal.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
-    Private WithEvents flowModules As FlowLayoutPanel
-    Private WithEvents flpPrincipal As FlowLayoutPanel
     Private WithEvents phPrincipal As Panel
     Private WithEvents lblTitulo As Label
     Private WithEvents lblSubtitulo As Label
+    Friend WithEvents btnClientes As Button
+    Friend WithEvents btnPlanes As Button
+    Friend WithEvents btnServicios As Button
+    Friend WithEvents btnInstalaciones As Button
+    Friend WithEvents btnFacturas As Button
+    Friend WithEvents btnInformes As Button
+    Friend WithEvents Button1 As Button
 End Class

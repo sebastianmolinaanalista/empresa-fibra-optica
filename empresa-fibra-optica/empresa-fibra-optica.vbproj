@@ -91,10 +91,40 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmPrincipal - Copia %288%29.Designer.vb">
-      <DependentUpon>frmPrincipal - Copia %288%29.vb</DependentUpon>
+    <Compile Include="frmClientes.Designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPrincipal - Copia %288%29.vb">
+    <Compile Include="frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFacturas.Designer.vb">
+      <DependentUpon>frmFacturas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFacturas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInformes.Designer.vb">
+      <DependentUpon>frmInformes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInformes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInstalaciones.Designer.vb">
+      <DependentUpon>frmInstalaciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmInstalaciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPlanes.Designer.vb">
+      <DependentUpon>frmPlanes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPlanes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPorSi.Designer.vb">
+      <DependentUpon>frmPorSi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmPorSi.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.vb">
@@ -102,6 +132,12 @@
     </Compile>
     <Compile Include="frmPrincipal.Designer.vb">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmServicios.Designer.vb">
+      <DependentUpon>frmServicios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmServicios.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -123,14 +159,36 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_empresa_servicio_internetDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="_empresa_servicio_internetDataSet.vb">
+      <DependentUpon>_empresa_servicio_internetDataSet.xsd</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmPrincipal - Copia %288%29.resx">
-      <DependentUpon>frmPrincipal - Copia %288%29.vb</DependentUpon>
+    <EmbeddedResource Include="frmClientes.resx">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFacturas.resx">
+      <DependentUpon>frmFacturas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInformes.resx">
+      <DependentUpon>frmInformes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmInstalaciones.resx">
+      <DependentUpon>frmInstalaciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPlanes.resx">
+      <DependentUpon>frmPlanes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPorSi.resx">
+      <DependentUpon>frmPorSi.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmServicios.resx">
+      <DependentUpon>frmServicios.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
@@ -153,14 +211,17 @@
     <None Include="packages.config" />
     <None Include="_empresa_servicio_internetDataSet.xsc">
       <DependentUpon>_empresa_servicio_internetDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="_empresa_servicio_internetDataSet.xsd">
+    <Content Include="_empresa_servicio_internetDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>_empresa_servicio_internetDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
-    </None>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="_empresa_servicio_internetDataSet.xss">
       <DependentUpon>_empresa_servicio_internetDataSet.xsd</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
   <ItemGroup>
