@@ -81,7 +81,7 @@
             Me.PlanesBindingSource.EndEdit()
             Me.Validate()
 
-            Me.TableAdapterManager.UpdateAll(Me._empresa_servicio_internetDataSet)
+            Me.PlanesTableAdapter.Update(Me._empresa_servicio_internetDataSet.Planes)
             Me.PlanesTableAdapter.Fill(Me._empresa_servicio_internetDataSet.Planes)
             MsgBox("Se han guardado los datos correctamente", vbOKOnly, "Actualizacion")
             estadoVisor()

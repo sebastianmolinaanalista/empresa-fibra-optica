@@ -349,13 +349,13 @@ Partial Class frmPlanes
         '
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
         Me.TableAdapterManager.ClientesTableAdapter = Nothing
-        Me.TableAdapterManager.Connection = Nothing
+        Me.TableAdapterManager.Connection = Me.PlanesTableAdapter.Connection
         Me.TableAdapterManager.Facturas_estadoTableAdapter = Nothing
         Me.TableAdapterManager.FacturasTableAdapter = Nothing
         Me.TableAdapterManager.Instalaciones_estadoTableAdapter = Nothing
         Me.TableAdapterManager.InstalacionesTableAdapter = Nothing
         Me.TableAdapterManager.PagosTableAdapter = Nothing
-        Me.TableAdapterManager.PlanesTableAdapter = Nothing
+        Me.TableAdapterManager.PlanesTableAdapter = Me.PlanesTableAdapter
         Me.TableAdapterManager.Servicios_estadoTableAdapter = Nothing
         Me.TableAdapterManager.ServiciosTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
