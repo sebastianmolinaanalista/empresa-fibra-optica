@@ -1,16 +1,7 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
-Public Class frmClientes
+﻿Public Class frmClientes
 
     Dim estado As Integer = 0 '0=visor, 1=nuevo, 2=editar
     Dim colId As DataColumn
-
-    Private Sub ClientesBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles ClientesBindingNavigatorSaveItem.Click
-        Me.Validate()
-        Me.ClientesBindingSource.EndEdit()
-        Me.TableAdapterManager.UpdateAll(Me._empresa_servicio_internetDataSet)
-
-    End Sub
 
     Private Sub frmClientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         colId = Me._empresa_servicio_internetDataSet.Clientes.id_clienteColumn
@@ -143,5 +134,46 @@ Public Class frmClientes
 
     Private Sub limpiar()
         Me.ClientesBindingSource.MoveFirst()
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim valor As String = txtBuscar.Text.Trim()
+
+        If String.IsNullOrWhiteSpace(valor) Then
+            ClientesBindingSource.Filter = Nothing
+            Exit Sub
+        End If
+
+        Dim filtro As String = ""
+        Dim texto As String = valor.Replace("'", "''")
+
+        Select Case cmbBuscarPor.Text
+            Case "DNI"
+                filtro = "dni LIKE '%" & texto & "%'"
+            Case "Nombre"
+                filtro = "nombre_apellido LIKE '%" & texto & "%'"
+            Case "Fecha alta"
+                Dim fechaAlta As DateTime
+                If Not DateTime.TryParse(texto, fechaAlta) Then
+                    MsgBox("Ingresá una fecha válida para buscar por Fecha alta.", vbExclamation, "Fecha inválida")
+                    Exit Sub
+                End If
+                Dim fechaAltaInicio As DateTime = fechaAlta.Date
+                Dim fechaAltaFin As DateTime = fechaAltaInicio.AddDays(1)
+                filtro = "fecha_alta >= #" & fechaAltaInicio.ToString("yyyy-MM-dd") & "# AND fecha_alta < #" & fechaAltaFin.ToString("yyyy-MM-dd") & "#"
+            Case "Fecha baja"
+                Dim fechaBaja As DateTime
+                If Not DateTime.TryParse(texto, fechaBaja) Then
+                    MsgBox("Ingresá una fecha válida para buscar por Fecha baja.", vbExclamation, "Fecha inválida")
+                    Exit Sub
+                End If
+                Dim fechaBajaInicio As DateTime = fechaBaja.Date
+                Dim fechaBajaFin As DateTime = fechaBajaInicio.AddDays(1)
+                filtro = "fecha_baja >= #" & fechaBajaInicio.ToString("yyyy-MM-dd") & "# AND fecha_baja < #" & fechaBajaFin.ToString("yyyy-MM-dd") & "#"
+            Case Else
+                filtro = "dni LIKE '%" & texto & "%'"
+        End Select
+
+        ClientesBindingSource.Filter = filtro
     End Sub
 End Class

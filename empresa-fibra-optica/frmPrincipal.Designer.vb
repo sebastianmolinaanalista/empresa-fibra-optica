@@ -33,6 +33,8 @@ Partial Class frmPrincipal
         Me.phPrincipal = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lblSubtitulo = New System.Windows.Forms.Label()
+        Me.btnParametros = New System.Windows.Forms.Button()
+        Me.btnSalir = New System.Windows.Forms.Button()
         Me.phPrincipal.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,7 +45,7 @@ Partial Class frmPrincipal
         Me.btnClientes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.btnClientes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnClientes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnClientes.Location = New System.Drawing.Point(95, 200)
+        Me.btnClientes.Location = New System.Drawing.Point(218, 210)
         Me.btnClientes.Margin = New System.Windows.Forms.Padding(10)
         Me.btnClientes.Name = "btnClientes"
         Me.btnClientes.Size = New System.Drawing.Size(250, 150)
@@ -56,7 +58,7 @@ Partial Class frmPrincipal
         Me.btnPlanes.BackColor = System.Drawing.Color.White
         Me.btnPlanes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.btnPlanes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnPlanes.Location = New System.Drawing.Point(95, 420)
+        Me.btnPlanes.Location = New System.Drawing.Point(218, 430)
         Me.btnPlanes.Margin = New System.Windows.Forms.Padding(10)
         Me.btnPlanes.Name = "btnPlanes"
         Me.btnPlanes.Size = New System.Drawing.Size(250, 150)
@@ -70,7 +72,7 @@ Partial Class frmPrincipal
         Me.btnServicios.BackColor = System.Drawing.Color.White
         Me.btnServicios.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.btnServicios.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnServicios.Location = New System.Drawing.Point(735, 181)
+        Me.btnServicios.Location = New System.Drawing.Point(558, 210)
         Me.btnServicios.Margin = New System.Windows.Forms.Padding(10)
         Me.btnServicios.Name = "btnServicios"
         Me.btnServicios.Size = New System.Drawing.Size(250, 150)
@@ -83,7 +85,7 @@ Partial Class frmPrincipal
         Me.btnInstalaciones.BackColor = System.Drawing.Color.White
         Me.btnInstalaciones.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.btnInstalaciones.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInstalaciones.Location = New System.Drawing.Point(415, 200)
+        Me.btnInstalaciones.Location = New System.Drawing.Point(558, 430)
         Me.btnInstalaciones.Margin = New System.Windows.Forms.Padding(10)
         Me.btnInstalaciones.Name = "btnInstalaciones"
         Me.btnInstalaciones.Size = New System.Drawing.Size(250, 150)
@@ -96,7 +98,7 @@ Partial Class frmPrincipal
         Me.btnFacturas.BackColor = System.Drawing.Color.White
         Me.btnFacturas.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.btnFacturas.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnFacturas.Location = New System.Drawing.Point(415, 420)
+        Me.btnFacturas.Location = New System.Drawing.Point(898, 210)
         Me.btnFacturas.Margin = New System.Windows.Forms.Padding(10)
         Me.btnFacturas.Name = "btnFacturas"
         Me.btnFacturas.Size = New System.Drawing.Size(250, 150)
@@ -109,7 +111,7 @@ Partial Class frmPrincipal
         Me.btnInformes.BackColor = System.Drawing.Color.White
         Me.btnInformes.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(CType(CType(204, Byte), Integer), CType(CType(219, Byte), Integer), CType(CType(231, Byte), Integer))
         Me.btnInformes.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnInformes.Location = New System.Drawing.Point(735, 420)
+        Me.btnInformes.Location = New System.Drawing.Point(898, 430)
         Me.btnInformes.Margin = New System.Windows.Forms.Padding(10)
         Me.btnInformes.Name = "btnInformes"
         Me.btnInformes.Size = New System.Drawing.Size(250, 150)
@@ -163,11 +165,31 @@ Partial Class frmPrincipal
         Me.lblSubtitulo.TabIndex = 1
         Me.lblSubtitulo.Text = "Panel principal"
         '
+        'btnParametros
+        '
+        Me.btnParametros.Location = New System.Drawing.Point(1157, 137)
+        Me.btnParametros.Name = "btnParametros"
+        Me.btnParametros.Size = New System.Drawing.Size(90, 34)
+        Me.btnParametros.TabIndex = 7
+        Me.btnParametros.Text = "Parametros"
+        Me.btnParametros.UseVisualStyleBackColor = True
+        '
+        'btnSalir
+        '
+        Me.btnSalir.Location = New System.Drawing.Point(1264, 136)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(90, 34)
+        Me.btnSalir.TabIndex = 8
+        Me.btnSalir.Text = "Salir"
+        Me.btnSalir.UseVisualStyleBackColor = True
+        '
         'frmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1366, 749)
+        Me.Controls.Add(Me.btnSalir)
+        Me.Controls.Add(Me.btnParametros)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnServicios)
         Me.Controls.Add(Me.btnInformes)
@@ -198,4 +220,6 @@ Partial Class frmPrincipal
     Friend WithEvents btnFacturas As Button
     Friend WithEvents btnInformes As Button
     Friend WithEvents Button1 As Button
+    Friend WithEvents btnParametros As Button
+    Friend WithEvents btnSalir As Button
 End Class

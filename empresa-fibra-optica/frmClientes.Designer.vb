@@ -31,18 +31,16 @@ Partial Class frmClientes
         Dim Fecha_altaLabel As System.Windows.Forms.Label
         Dim Fecha_bajaLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmClientes))
-        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle13 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle14 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle15 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.phPrincipal = New System.Windows.Forms.Panel()
         Me.lblTitulo = New System.Windows.Forms.Label()
         Me.lblSubtitulo = New System.Windows.Forms.Label()
-        Me._empresa_servicio_internetDataSet = New empresa_fibra_optica._empresa_servicio_internetDataSet()
-        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.ClientesTableAdapter = New empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.ClientesTableAdapter()
-        Me.TableAdapterManager = New empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.TableAdapterManager()
         Me.ClientesBindingNavigator = New System.Windows.Forms.BindingNavigator(Me.components)
         Me.BindingNavigatorAddNewItem = New System.Windows.Forms.ToolStripButton()
+        Me.ClientesBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me._empresa_servicio_internetDataSet = New empresa_fibra_optica._empresa_servicio_internetDataSet()
         Me.BindingNavigatorCountItem = New System.Windows.Forms.ToolStripLabel()
         Me.BindingNavigatorDeleteItem = New System.Windows.Forms.ToolStripButton()
         Me.BindingNavigatorMoveFirstItem = New System.Windows.Forms.ToolStripButton()
@@ -69,7 +67,6 @@ Partial Class frmClientes
         Me.DireccionDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechaaltaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.FechabajaDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ClientesBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.lblFormularioTitulo = New System.Windows.Forms.Label()
         Me.btnNuevo = New System.Windows.Forms.Button()
         Me.btnGuardar = New System.Windows.Forms.Button()
@@ -79,8 +76,11 @@ Partial Class frmClientes
         Me.btnCancelar = New System.Windows.Forms.Button()
         Me.lblBuscar = New System.Windows.Forms.Label()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.cmbBuscarPor = New System.Windows.Forms.ComboBox()
         Me.btnSalir = New System.Windows.Forms.Button()
         Me.lblBandera = New System.Windows.Forms.Label()
+        Me.ClientesTableAdapter = New empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.ClientesTableAdapter()
+        Me.TableAdapterManager = New empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.TableAdapterManager()
         Id_clienteLabel = New System.Windows.Forms.Label()
         Nombre_apellidoLabel = New System.Windows.Forms.Label()
         DniLabel = New System.Windows.Forms.Label()
@@ -89,12 +89,11 @@ Partial Class frmClientes
         Fecha_altaLabel = New System.Windows.Forms.Label()
         Fecha_bajaLabel = New System.Windows.Forms.Label()
         Me.phPrincipal.SuspendLayout()
-        CType(Me._empresa_servicio_internetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ClientesBindingNavigator, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ClientesBindingNavigator.SuspendLayout()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me._empresa_servicio_internetDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Id_clienteLabel
@@ -200,34 +199,6 @@ Partial Class frmClientes
         Me.lblSubtitulo.TabIndex = 1
         Me.lblSubtitulo.Text = "Panel Clientes"
         '
-        '_empresa_servicio_internetDataSet
-        '
-        Me._empresa_servicio_internetDataSet.DataSetName = "_empresa_servicio_internetDataSet"
-        Me._empresa_servicio_internetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
-        '
-        'ClientesBindingSource
-        '
-        Me.ClientesBindingSource.DataMember = "Clientes"
-        Me.ClientesBindingSource.DataSource = Me._empresa_servicio_internetDataSet
-        '
-        'ClientesTableAdapter
-        '
-        Me.ClientesTableAdapter.ClearBeforeFill = True
-        '
-        'TableAdapterManager
-        '
-        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
-        Me.TableAdapterManager.ClientesTableAdapter = Me.ClientesTableAdapter
-        Me.TableAdapterManager.Facturas_estadoTableAdapter = Nothing
-        Me.TableAdapterManager.FacturasTableAdapter = Nothing
-        Me.TableAdapterManager.Instalaciones_estadoTableAdapter = Nothing
-        Me.TableAdapterManager.InstalacionesTableAdapter = Nothing
-        Me.TableAdapterManager.PagosTableAdapter = Nothing
-        Me.TableAdapterManager.PlanesTableAdapter = Nothing
-        Me.TableAdapterManager.Servicios_estadoTableAdapter = Nothing
-        Me.TableAdapterManager.ServiciosTableAdapter = Nothing
-        Me.TableAdapterManager.UpdateOrder = empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
-        '
         'ClientesBindingNavigator
         '
         Me.ClientesBindingNavigator.AddNewItem = Me.BindingNavigatorAddNewItem
@@ -236,7 +207,7 @@ Partial Class frmClientes
         Me.ClientesBindingNavigator.DeleteItem = Me.BindingNavigatorDeleteItem
         Me.ClientesBindingNavigator.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.ClientesBindingNavigator.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BindingNavigatorMoveFirstItem, Me.BindingNavigatorMovePreviousItem, Me.BindingNavigatorSeparator, Me.BindingNavigatorPositionItem, Me.BindingNavigatorCountItem, Me.BindingNavigatorSeparator1, Me.BindingNavigatorMoveNextItem, Me.BindingNavigatorMoveLastItem, Me.BindingNavigatorSeparator2, Me.BindingNavigatorAddNewItem, Me.BindingNavigatorDeleteItem, Me.ClientesBindingNavigatorSaveItem})
-        Me.ClientesBindingNavigator.Location = New System.Drawing.Point(0, 695)
+        Me.ClientesBindingNavigator.Location = New System.Drawing.Point(0, 724)
         Me.ClientesBindingNavigator.MoveFirstItem = Me.BindingNavigatorMoveFirstItem
         Me.ClientesBindingNavigator.MoveLastItem = Me.BindingNavigatorMoveLastItem
         Me.ClientesBindingNavigator.MoveNextItem = Me.BindingNavigatorMoveNextItem
@@ -256,6 +227,16 @@ Partial Class frmClientes
         Me.BindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = True
         Me.BindingNavigatorAddNewItem.Size = New System.Drawing.Size(23, 22)
         Me.BindingNavigatorAddNewItem.Text = "Agregar nuevo"
+        '
+        'ClientesBindingSource
+        '
+        Me.ClientesBindingSource.DataMember = "Clientes"
+        Me.ClientesBindingSource.DataSource = Me._empresa_servicio_internetDataSet
+        '
+        '_empresa_servicio_internetDataSet
+        '
+        Me._empresa_servicio_internetDataSet.DataSetName = "_empresa_servicio_internetDataSet"
+        Me._empresa_servicio_internetDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
         'BindingNavigatorCountItem
         '
@@ -345,6 +326,7 @@ Partial Class frmClientes
         'Id_clienteTextBox
         '
         Me.Id_clienteTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.ClientesBindingSource, "id_cliente", True))
+        Me.Id_clienteTextBox.Enabled = False
         Me.Id_clienteTextBox.Location = New System.Drawing.Point(30, 230)
         Me.Id_clienteTextBox.Name = "Id_clienteTextBox"
         Me.Id_clienteTextBox.Size = New System.Drawing.Size(350, 20)
@@ -402,28 +384,28 @@ Partial Class frmClientes
         '
         Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
-        DataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
-        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle4
+        DataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(CType(CType(240, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.DataGridView1.AlternatingRowsDefaultCellStyle = DataGridViewCellStyle13
         Me.DataGridView1.AutoGenerateColumns = False
-        DataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
-        DataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(151, Byte), Integer))
-        DataGridViewCellStyle5.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
-        DataGridViewCellStyle5.ForeColor = System.Drawing.Color.White
-        DataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle5
+        DataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter
+        DataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(90, Byte), Integer), CType(CType(151, Byte), Integer))
+        DataGridViewCellStyle14.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Bold)
+        DataGridViewCellStyle14.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.DataGridView1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle14
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IdclienteDataGridViewTextBoxColumn, Me.NombreapellidoDataGridViewTextBoxColumn, Me.DniDataGridViewTextBoxColumn, Me.TelefonoDataGridViewTextBoxColumn, Me.DireccionDataGridViewTextBoxColumn, Me.FechaaltaDataGridViewTextBoxColumn, Me.FechabajaDataGridViewTextBoxColumn})
         Me.DataGridView1.DataSource = Me.ClientesBindingSource
-        DataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
-        DataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window
-        DataGridViewCellStyle6.Font = New System.Drawing.Font("Segoe UI", 10.0!)
-        DataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText
-        DataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight
-        DataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText
-        DataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
-        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle6
+        DataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle15.Font = New System.Drawing.Font("Segoe UI", 10.0!)
+        DataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.DataGridView1.DefaultCellStyle = DataGridViewCellStyle15
         Me.DataGridView1.EnableHeadersVisualStyles = False
         Me.DataGridView1.Location = New System.Drawing.Point(425, 260)
         Me.DataGridView1.Name = "DataGridView1"
@@ -494,11 +476,6 @@ Partial Class frmClientes
         Me.FechabajaDataGridViewTextBoxColumn.ReadOnly = True
         Me.FechabajaDataGridViewTextBoxColumn.Width = 110
         '
-        'ClientesBindingSource1
-        '
-        Me.ClientesBindingSource1.DataMember = "Clientes"
-        Me.ClientesBindingSource1.DataSource = Me._empresa_servicio_internetDataSet
-        '
         'lblFormularioTitulo
         '
         Me.lblFormularioTitulo.AutoSize = True
@@ -551,7 +528,7 @@ Partial Class frmClientes
         Me.btnBuscar.BackColor = System.Drawing.Color.White
         Me.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnBuscar.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Location = New System.Drawing.Point(845, 148)
+        Me.btnBuscar.Location = New System.Drawing.Point(985, 148)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(120, 40)
         Me.btnBuscar.TabIndex = 27
@@ -598,8 +575,18 @@ Partial Class frmClientes
         Me.txtBuscar.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtBuscar.Location = New System.Drawing.Point(546, 157)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(260, 25)
+        Me.txtBuscar.Size = New System.Drawing.Size(240, 25)
         Me.txtBuscar.TabIndex = 24
+        '
+        'cmbBuscarPor
+        '
+        Me.cmbBuscarPor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbBuscarPor.Font = New System.Drawing.Font("Segoe UI", 10.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cmbBuscarPor.Items.AddRange(New Object() {"DNI", "Nombre", "Fecha alta", "Fecha baja"})
+        Me.cmbBuscarPor.Location = New System.Drawing.Point(800, 158)
+        Me.cmbBuscarPor.Name = "cmbBuscarPor"
+        Me.cmbBuscarPor.Size = New System.Drawing.Size(150, 25)
+        Me.cmbBuscarPor.TabIndex = 25
         '
         'btnSalir
         '
@@ -624,6 +611,24 @@ Partial Class frmClientes
         Me.lblBandera.TabIndex = 31
         Me.lblBandera.Text = "MODO"
         '
+        'ClientesTableAdapter
+        '
+        Me.ClientesTableAdapter.ClearBeforeFill = True
+        '
+        'TableAdapterManager
+        '
+        Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.ClientesTableAdapter = Me.ClientesTableAdapter
+        Me.TableAdapterManager.Facturas_estadoTableAdapter = Nothing
+        Me.TableAdapterManager.FacturasTableAdapter = Nothing
+        Me.TableAdapterManager.Instalaciones_estadoTableAdapter = Nothing
+        Me.TableAdapterManager.InstalacionesTableAdapter = Nothing
+        Me.TableAdapterManager.PagosTableAdapter = Nothing
+        Me.TableAdapterManager.PlanesTableAdapter = Nothing
+        Me.TableAdapterManager.Servicios_estadoTableAdapter = Nothing
+        Me.TableAdapterManager.ServiciosTableAdapter = Nothing
+        Me.TableAdapterManager.UpdateOrder = empresa_fibra_optica._empresa_servicio_internetDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -634,6 +639,7 @@ Partial Class frmClientes
         Me.Controls.Add(Me.lblFormularioTitulo)
         Me.Controls.Add(Me.lblBuscar)
         Me.Controls.Add(Me.txtBuscar)
+        Me.Controls.Add(Me.cmbBuscarPor)
         Me.Controls.Add(Me.btnBuscar)
         Me.Controls.Add(Me.btnNuevo)
         Me.Controls.Add(Me.btnGuardar)
@@ -661,17 +667,16 @@ Partial Class frmClientes
         Me.MaximizeBox = False
         Me.Name = "frmClientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "frmClientes"
+        Me.Text = "Sistema T1 Token Ring"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.phPrincipal.ResumeLayout(False)
         Me.phPrincipal.PerformLayout()
-        CType(Me._empresa_servicio_internetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ClientesBindingNavigator, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ClientesBindingNavigator.ResumeLayout(False)
         Me.ClientesBindingNavigator.PerformLayout()
+        CType(Me.ClientesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me._empresa_servicio_internetDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.ClientesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -704,10 +709,10 @@ Partial Class frmClientes
     Friend WithEvents Fecha_altaDateTimePicker As DateTimePicker
     Friend WithEvents Fecha_bajaDateTimePicker As DateTimePicker
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents ClientesBindingSource1 As BindingSource
     Friend WithEvents lblFormularioTitulo As Label
     Friend WithEvents lblBuscar As Label
     Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents cmbBuscarPor As ComboBox
     Friend WithEvents btnNuevo As Button
     Friend WithEvents btnGuardar As Button
     Friend WithEvents btnEditar As Button

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -66,7 +66,9 @@
     <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
@@ -121,10 +123,10 @@
     <Compile Include="frmPlanes.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPorSi.Designer.vb">
-      <DependentUpon>frmPorSi.vb</DependentUpon>
+    <Compile Include="frmParametros.Designer.vb">
+      <DependentUpon>frmParametros.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmPorSi.vb">
+    <Compile Include="frmParametros.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmPrincipal.vb">
@@ -181,8 +183,8 @@
     <EmbeddedResource Include="frmPlanes.resx">
       <DependentUpon>frmPlanes.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPorSi.resx">
-      <DependentUpon>frmPorSi.vb</DependentUpon>
+    <EmbeddedResource Include="frmParametros.resx">
+      <DependentUpon>frmParametros.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.vb</DependentUpon>
@@ -196,6 +198,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <Content Include="rptClientesActivos.rdlc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">

@@ -28,4 +28,12 @@
         frmInformes.Show()
         Me.Hide()
     End Sub
+
+    Private Sub btnParametros_Click(sender As Object, e As EventArgs) Handles btnParametros.Click
+        frmParametros.Show()
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Me.Close()
+    End Sub
 End Class
